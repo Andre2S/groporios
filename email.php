@@ -7,14 +7,14 @@ $telefone = addslashes($_POST['telefone']);
 $email= addslashes($_POST['email']);
 $message = addslashes($_POST['message']);
 
-$to = "contato@andressilva.com.br";
+$to = "contato@rosestrieder.mat.br";
 $subject = "Contato - Grupo Rios Engenharia";
 $body = "Nome: ".$name. "\r\n".
         "Telefone: ".$telefone. "\r\n".
         "Email: ".$email. "\r\n".
         "Mensagem: ".$message;
 
-$header = "From:andressilva.com.br"."\r\n".
+$header = "From:contato@rosestrieder.mat.br"."\r\n".
             "Reply-To:".$email."\e\n".
             "x=Mailer:PHP/".phpversion();
 
