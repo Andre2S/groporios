@@ -8,19 +8,20 @@ $email= addslashes($_POST['email']);
 $message = addslashes($_POST['message']);
 
 $to = "contato@rosestrieder.mat.br";
-$subject = "Contato - Grupo Rios Engenharia";
+$subject = "Contato - Professora Rose";
 $body = "Nome: ".$name. "\r\n".
         "Telefone: ".$telefone. "\r\n".
         "Email: ".$email. "\r\n".
         "Mensagem: ".$message;
 
-$header = "From:contato@rosestrieder.mat.br"."\r\n".
+$header = "From:rosestrieder.mat.br"."\r\n".
             "Reply-To:".$email."\e\n".
             "x=Mailer:PHP/".phpversion();
 
             
 if(mail($to,$subject,$body,$header)){
     echo("$name, O Email enviado com sucesso!");
+    header("Refresh: 5;url=https://rosestrieder.mat.br/");
     
 
 }else{
